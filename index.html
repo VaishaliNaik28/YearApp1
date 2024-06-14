@@ -1,0 +1,51 @@
+<html>
+<head>
+	<title> Select Year App By Vaishali Naik </title>
+	<style>
+		*{font-size:50px;}
+		body{background-color:#FFA006;}
+		.btn{width:30%;}
+		form{border:2px solid black; 
+		width:800px;height:550px;padding:20px;
+		box-shadow:0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+		margin:auto;
+		backdrop-filter:blur(10px);
+		border-radius:30px;
+		background:#FD6905;
+		display:block;
+		padding:8px;}
+	</style>
+</head>
+<body>
+<center>
+	<form onsubmit="show()">
+	<h1> Select Your Engineering Year </h1>
+	<input type="text" placeholder="Enter your name" id="name"/>
+	<br/><br/>
+	<select name="year" id="year">
+		<label>Select Engg year</label>
+		<option value="F.E" >F.E </option>
+		<option value="S.E" >S.E </option>
+		<option value="T.E" >T.E </option>
+		<option value="B.E" >B.E </option>
+	</select>
+	<br/><br/>
+	<input type="submit" class="btn"/>
+	<h2 id="msg" />
+	</form>
+	<script>
+		function show()
+		{
+		event.preventDefault();
+		let name = document.getElementById("name");
+		let year = document.getElementById("year");
+		let msg = document.getElementById("msg");
+
+		let ans = "Name = " + name.value+ " " + "Year =" + year.value;
+		msg.innerHTML = ans;
+		}
+	</script>
+</center>
+<span id="PING_IFRAME_FORM_DETECTION" style="display:none;"></span>
+</body>
+</html>
